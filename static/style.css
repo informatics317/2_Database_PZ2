@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: #f4f6f8;
+}
+
+.container {
+    width: min(1050px, 100% - 32px);
+    margin: 0 auto;
+}
+
+
+.site-header {
+    background: #17324d;
+    color: white;
+    padding: 15px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 30px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.books-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    min-width: 200px;
+}
+
+.book-card h3 {
+    margin: 0 0 6px 0;
+}
+
+.book-card .author {
+    font-weight: bold;
+}
+
+.book-card .year {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.book-card .description {
+    margin: 10px 0;
+}
+
+.btn-small {
+    background: #17324d;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    min-width: 150px;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    background: #17324d;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.add-form {
+    background: white;
+    padding: 24px 28px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.add-form .form-group {
+    margin-bottom: 16px;
+}
+
+.add-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.add-form input,
+.add-form textarea,
+.add-form select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #fafafa;
+}
+
+.add-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.add-form .btn-submit {
+    background: #17324d;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.site-footer {
+    padding: 24px 0;
+    background: #e8edf2;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #d0d7de;
+}
+
+
+@media (max-width: 700px) {
+    .site-header .container,
+    .menu,
+    .books-grid,
+    .search-form,
+    .add-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-header .container {
+        text-align: center;
+    }
+
+    .menu {
+        align-items: center;
+    }
+
+    .search-form input[type="text"],
+    .search-form button {
+        width: 100%;
+    }
+}

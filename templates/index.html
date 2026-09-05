@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Каталог книг{% endblock %}
+
+{% block content %}
+<h2>Каталог книг</h2>
+
+
+<div class="books-grid">
+    <article class="book-card">
+	<h3>Мастер и Маргарита</h3>
+	<img src="{{ url_for('static', filename='images/master.jpg') }}"
+         alt="Обложка Мастер и Маргарита"
+         style="width:100%; max-height:400px; object-fit:cover; border-radius:8px;">
+        <div class="author">Михаил Булгаков</div>
+        <div class="year">1967</div>
+        <p class="description">Роман о дьяволе, любви и свободе, смешивающий реальность и фантазию.</p>
+    </article>
+
+    <article class="book-card">
+        <h3>Преступление и наказание</h3>
+	<img src="{{ url_for('static', filename='images/crime.jpg') }}"
+         alt="Обложка Преступление и наказание"
+         style="width:100%; max-height:400px; object-fit:cover; border-radius:8px;">
+        <div class="author">Фёдор Достоевский</div>
+        <div class="year">1866</div>
+        <p class="description">Психологическая драма о студенте Раскольникове и его теории «обыкновенных» и «необыкновенных» людей.</p>
+    </article>
+
+    <article class="book-card">
+        <h3>1984</h3>
+	<img src="{{ url_for('static', filename='images/1984.jpg') }}"
+         alt="Обложка 1984"
+         style="width:100%; max-height:400px; object-fit:cover; border-radius:8px;">
+        <div class="author">Джордж Оруэлл</div>
+        <div class="year">1949</div>
+        <p class="description">Антиутопия о тоталитарном режиме, слежке и уничтожении индивидуальности.</p>
+    </article>
+
+    <article class="book-card">
+        <h3>Анна Каренина</h3>
+	<img src="{{ url_for('static', filename='images/anna.jpg') }}"
+         alt="Обложка Анна Каренина"
+         style="width:100%; max-height:400px; object-fit:cover; border-radius:8px;">
+        <div class="author">Лев Толстой</div>
+        <div class="year">1877</div>
+        <p class="description">История трагической любви замужней женщины и офицера на фоне русского общества XIX века.</p>
+    </article>
+</div>
+{% endblock %}
